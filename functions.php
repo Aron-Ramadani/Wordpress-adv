@@ -20,4 +20,62 @@ function config(){
 }
 
 add_action('after_setup_theme','comfig',0);
+
+function wpdevs_sidebar(){
+    register_sidebar(
+        array(
+            'name' => 'Block Sidebar';
+            'id' => 'sidebar-blog';
+            'description' => 'This is the blog sidebar.',
+            'before widget' => '<div class="widget-wrapper">',
+            'after_widget' => '</div>', 
+            'before_title' => '<h4 class="widget-title">',
+            'after_title' => '</h4>'
+
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name' => 'Service 1';
+            'id' => 'services-1';
+            'description' => 'first service area',
+            'before widget' => '<div class="widget-wrapper">',
+            'after_widget' => '</div>', 
+            'before_title' => '<h4 class="widget-title">',
+            'after_title' => '</h4>'
+
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name' => 'Service 2';
+            'id' => 'services-2';
+            'description' => 'second service area',
+            'before widget' => '<div class="widget-wrapper">',
+            'after_widget' => '</div>', 
+            'before_title' => '<h4 class="widget-title">',
+            'after_title' => '</h4>'
+
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name' => 'Service 3';
+            'id' => 'services-3';
+            'description' => 'third service area',
+            'before widget' => '<div class="widget-wrapper">',
+            'after_widget' => '</div>', 
+            'before_title' => '<h4 class="widget-title">',
+            'after_title' => '</h4>'
+
+        )
+    );
+
+    add_action('widgets_init','wpdevs_sidebars');
+
+}
+
 ?>
