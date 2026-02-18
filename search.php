@@ -12,6 +12,7 @@
                         the_post();
                         get_template_part('parts/contant','search');
                         endwhile ;
+                        the_posts_
 
                 ?>
             </div>
